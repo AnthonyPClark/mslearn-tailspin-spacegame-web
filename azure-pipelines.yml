@@ -51,7 +51,7 @@ steps:
     command: custom
     custom: tool
     arguments: 'restore'
-  
+
 - task: DotNetCoreCLI@2
   displayName: 'Run unit tests - $(buildConfiguration)'
   inputs:
@@ -60,7 +60,7 @@ steps:
     publishTestResults: true
     projects: '**/*.Tests.csproj'
 
- task: DotNetCoreCLI@2
+- task: DotNetCoreCLI@2
   displayName: 'Create code coverage report'
   inputs:
     command: custom
